@@ -9,7 +9,7 @@ const app = express();
 const Quiz = require('./models/Quiz.js')
 
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+app.use(cors({ origin: ['http://localhost:5173','https://mern-task-app.onrender.com'], credentials: true }));
 async function insertDummyQuestions() {
   try {
     // Check if there are any existing quizzes
